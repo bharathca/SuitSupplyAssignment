@@ -1,0 +1,14 @@
+# Compiled class files
+*.class
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+test-output/
+
+.DS_Store
+
