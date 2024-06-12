@@ -1,5 +1,4 @@
-SauceDemo Test Automation
-This repository contains a test automation framework for the SauceDemo application. The framework uses Selenium for browser automation, Cucumber for behavior-driven development (BDD), and Extent Reports for reporting test results.
+SuitSupplyTestAutomationAssignment
 
 
 ## Table of Contents
