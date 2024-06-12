@@ -12,9 +12,9 @@ import com.java.base.JavaBase;
 import com.selenium.design.Locators;
 import com.testng.base.SuitSupplySpecificMethods;
 
-public class SneakersPage extends SuitSupplySpecificMethods {
+public class ProductsPage extends SuitSupplySpecificMethods {
 
-	public SneakersPage(WebDriver driver) {
+	public ProductsPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
