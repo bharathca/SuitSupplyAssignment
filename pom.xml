@@ -5,22 +5,78 @@
 	<groupId>bv.suitsupply</groupId>
 	<artifactId>suitsupplyassignment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<!-- Tools version maintenance -->
+		<selenium.java.version>4.21.0</selenium.java.version>
+		<testng.version>7.10.2</testng.version>
+
+		<log4j.core.version>2.23.1</log4j.core.version>
+
+
+		<maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+
+		<!-- Maven compiler maintenance -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
+
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.21.0</version>
+			<version>${selenium.java.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.10.2</version>
-			<scope>test</scope>
+			<version>${testng.version}</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.core.version}</version>
+		</dependency>
+
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>${maven.surefire.plugin.version}</version>
 		</dependency>
 
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
 </project>

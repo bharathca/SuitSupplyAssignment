@@ -114,7 +114,7 @@ public class SuitSupplyTests {
 		} else {
 			System.out.println("Add to bag button is enabled before choosing the size - Should not be the case ");
 		}
-
+//here
 		List<WebElement> getSizesElements = driver
 				.findElements(By.cssSelector("div[data-automation-key-size-enabled='true']"));
 
